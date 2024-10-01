@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gadias-d <gadias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 14:52:15 by gadias-d          #+#    #+#             */
-/*   Updated: 2024/10/01 14:54:23 by gadias-d         ###   ########.fr       */
+/*   Created: 2024/10/01 15:17:19 by gadias-d          #+#    #+#             */
+/*   Updated: 2024/10/01 15:18:49 by gadias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char letter)
+int	*ft_range(int min, int max)
 {
-	write(1, &letter, 1);
-}
-
-void	ft_putstr(char *str)
-{
+	int	length;
+	int	*arr;
 	int	i;
 
+	length = max - min;
 	i = 0;
-	while (str[i] != '\0')
+	arr = malloc(length * sizeof(int));
+	if (arr == 0)
+		return (0);
+	while (i < length)
 	{
-		ft_putchar(str[i]);
+		arr[i] = min + i;
 		i++;
 	}
+	return (arr);
 }

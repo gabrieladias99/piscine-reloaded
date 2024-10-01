@@ -1,25 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gadias-d <gadias-d@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/01 14:51:50 by gadias-d          #+#    #+#             */
+/*   Updated: 2024/10/01 14:52:06 by gadias-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
 	int	i;
 
 	i = 1;
-
 	while (i * i <= nb)
 	{
-		if(i * i == nb)
-			return i;
+		if (i * i == nb)
+			return (i);
 		i++;
 	}
-	return 0;
-}
-
-#include <stdio.h>
-int main(void)
-{
-	printf("%d\n",ft_sqrt(4));
-	printf("%d\n",ft_sqrt(121));
-	printf("%d\n",ft_sqrt(0));
-	printf("%d\n",ft_sqrt(-1));
-	printf("%d\n",ft_sqrt(200));
+	return (0);
 }

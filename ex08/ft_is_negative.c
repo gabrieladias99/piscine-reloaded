@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gadias-d <gadias-d@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/01 14:44:17 by gadias-d          #+#    #+#             */
+/*   Updated: 2024/10/01 14:44:53 by gadias-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char letter)
@@ -15,11 +27,4 @@ void	ft_is_negative(int n)
 	{
 		ft_putchar('P');
 	}
-}
-
-int	main(void)
-{
-	ft_is_negative(2);
-	ft_is_negative(-2);
-	ft_is_negative(0);
 }

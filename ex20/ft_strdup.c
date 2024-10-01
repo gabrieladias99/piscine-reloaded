@@ -1,30 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gadias-d <gadias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 14:52:15 by gadias-d          #+#    #+#             */
-/*   Updated: 2024/10/01 14:54:23 by gadias-d         ###   ########.fr       */
+/*   Created: 2024/10/01 15:16:35 by gadias-d          #+#    #+#             */
+/*   Updated: 2024/10/01 15:17:00 by gadias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_putchar(char letter)
-{
-	write(1, &letter, 1);
-}
-
-void	ft_putstr(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+char	*ft_strdup(char *src)
+{
+	int		length;
+	char	*duplicate;
+	int		i;
+
+	length = ft_strlen(src);
+	i = 0;
+	duplicate = malloc((length +1) * sizeof(char));
+	if (duplicate == NULL)
+		return (NULL);
+	while (src[i] != '\0')
 	{
-		ft_putchar(str[i]);
+		duplicate[i] = src[i];
 		i++;
 	}
+	duplicate[i] = '\0';
+	return (duplicate);
 }

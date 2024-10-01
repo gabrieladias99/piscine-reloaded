@@ -1,16 +1,21 @@
-int ft_strlen(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gadias-d <gadias-d@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/01 14:54:47 by gadias-d          #+#    #+#             */
+/*   Updated: 2024/10/01 14:55:25 by gadias-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(str[i]!= '\0')
-        i++;
-
-    return i;
-}
-
-#include <stdio.h>
-int main(void)
-{
-    printf("%d", ft_strlen("Gabriela Dias"));
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

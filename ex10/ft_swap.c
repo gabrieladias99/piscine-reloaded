@@ -1,20 +1,20 @@
-void    ft_swap(int *a, int *b)
-{
-    int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gadias-d <gadias-d@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/01 14:46:10 by gadias-d          #+#    #+#             */
+/*   Updated: 2024/10/01 14:47:03 by gadias-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-
-int main(void)
+void	ft_swap(int *a, int *b)
 {
-    int c = 42;
-    int d = 10;
-    int *a = &c;
-    int *b = &d;
-    printf("a=%d, b=%d\n",*a,*b);
-    ft_swap(a,b);
-    printf("a=%d, b=%d\n",*a,*b);
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }

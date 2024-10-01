@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gadias-d <gadias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 14:52:15 by gadias-d          #+#    #+#             */
-/*   Updated: 2024/10/01 14:54:23 by gadias-d         ###   ########.fr       */
+/*   Created: 2024/10/01 15:19:58 by gadias-d          #+#    #+#             */
+/*   Updated: 2024/10/01 15:27:36 by gadias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-void	ft_putchar(char letter)
+static inline int	ft_abs(int value)
 {
-	write(1, &letter, 1);
+	if (value < 0)
+		return (-value);
+	else
+		return (value);
 }
-
-void	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
+#endif

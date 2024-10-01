@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gadias-d <gadias-d@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/01 14:42:00 by gadias-d          #+#    #+#             */
+/*   Updated: 2024/10/01 14:44:01 by gadias-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_putchar(char letter)
+void	ft_putchar(char letter)
 {
 	write(1, &letter, 1);
-
 }
+
 void	ft_print_alphabet(void)
 {
 	int	i;
@@ -15,9 +27,4 @@ void	ft_print_alphabet(void)
 		ft_putchar(i);
 		i++;
 	}
-}
-
-int main(void)
-{
-	ft_print_alphabet();
 }
