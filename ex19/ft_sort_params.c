@@ -6,11 +6,11 @@
 /*   By: gadias-d <gadias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 15:16:11 by gadias-d          #+#    #+#             */
-/*   Updated: 2024/10/01 15:40:03 by gadias-d         ###   ########.fr       */
+/*   Updated: 2024/10/02 11:18:28 by gadias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char letter);
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -33,10 +33,10 @@ void	ft_print(char **argv, int argc)
 	{
 		while (argv[i][j] != '\0')
 		{
-			write(1, &argv[i][j], 1);
+			ft_putchar(&argv[i][j]);
 			j++;
 		}
-		write(1, "\n", 1);
+		ft_putchar("\n");
 		j = 0;
 		i++;
 	}
